@@ -1,88 +1,22 @@
 <div class="content mat-typography">
-  <header>
-    <mat-toolbar class="mat-primary">
-      <h1>Avon Battalion - Home</h1>
-    </mat-toolbar>
-  </header>
+  <app-header title="Home"></app-header>
 
-  <mat-sidenav-container>
+  <app-sidenav>
+    <mat-grid-list app-sidenav-content cols="12" gutterSize="16px" rowHeight="100px">
+      <mat-grid-tile *ngFor="let card of cards" [colspan]="12" [rowspan]="2">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>
+              <h1>{{ card.title }}</h1>
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p>{{ card.content }}</p>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </app-sidenav>
 
-    <mat-sidenav mode="side" opened>
-      <mat-nav-list>
-
-        <mat-list-item routerLink="/home" routerLinkActive="active">
-          <mat-icon matListIcon>home</mat-icon>
-          <p matLine>Home</p>
-        </mat-list-item>
-
-        <mat-list-item routerLink="/info" routerLinkActive="active">
-          <mat-icon matListIcon>info</mat-icon>
-          <p matLine>Info</p>
-        </mat-list-item>
-
-        <mat-list-item routerLink="/companies" routerLinkActive="active">
-          <mat-icon matListIcon>group</mat-icon>
-          <p matLine>Companies</p>
-        </mat-list-item>
-
-        <mat-list-item routerLink="/events" routerLinkActive="active">
-          <mat-icon matListIcon>date_range</mat-icon>
-          <p matLine>Events</p>
-        </mat-list-item>
-
-      </mat-nav-list>
-    </mat-sidenav>
-
-    <mat-sidenav-content>
-      <mat-grid-list cols="12" gutterSize="16px" rowHeight="100px">
-
-        <mat-grid-tile [colspan]="12" [rowspan]="2">
-          <mat-card>
-            <mat-card-header>
-              <mat-card-title>
-                <h1>Welcome</h1>
-              </mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-              <p>The Avon Battalion consists of the various companies in and around the Bristol area.</p>
-            </mat-card-content>
-          </mat-card>
-        </mat-grid-tile>
-
-        <mat-grid-tile [colspan]="12" [rowspan]="2">
-          <mat-card>
-            <mat-card-header>
-              <mat-card-title>
-                <h1>Company Finder</h1>
-              </mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-              <p>This feature is coming soon! Check back later for more information.</p>
-            </mat-card-content>
-          </mat-card>
-        </mat-grid-tile>
-
-        <mat-grid-tile [colspan]="12" [rowspan]="2">
-          <mat-card>
-            <mat-card-header>
-              <mat-card-title>
-                <h1>Questions</h1>
-              </mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-              <p>Please do not hesitate to get in touch with us. You can contact us via email <a href="mailto:avon.battalion@boys-brigade.org.uk">here</a>.</p>
-            </mat-card-content>
-          </mat-card>
-        </mat-grid-tile>
-
-      </mat-grid-list>
-    </mat-sidenav-content>
-
-  </mat-sidenav-container>
-
-  <footer>
-    <mat-toolbar class="mat-primary">
-      <h1>Website Created By <a href="https://www.linkedin.com/in/thomas-clark-091aa313a" target="_blank">Thomas Clark</a></h1>
-    </mat-toolbar>
-  </footer>
+  <app-footer></app-footer>
 </div>

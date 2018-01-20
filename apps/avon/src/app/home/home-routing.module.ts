@@ -6,12 +6,12 @@ import { HomeComponent } from './pages/home/home.component';
 const ROUTES: Routes = [
   {
     component: HomeComponent,
-    path: ''
-  }
+    path: '',
+  },
 ];
 
 @NgModule({
-  exports: [RouterModule],
-  imports: [RouterModule.forChild(ROUTES)]
+  exports: [ RouterModule ],
+  imports: [ RouterModule.forChild(ROUTES) ],
 })
-export class HomeRoutingModule {}
+export class HomeRoutingModule { }
