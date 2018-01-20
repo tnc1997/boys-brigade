@@ -1,0 +1,33 @@
+{
+  "extends": [
+    "tslint:recommended",
+    "./scripts/tslint.js"
+  ],
+  "rules": {
+    "no-attribute-parameter-decorator": true,
+    "no-forward-ref": true,
+    "no-input-rename": true,
+    "no-output-rename": true,
+
+    "use-host-property-decorator": true,
+    "use-input-property-decorator": true,
+    "use-life-cycle-interface": true,
+    "use-output-property-decorator": true,
+    "use-pipe-transform-interface": true,
+
+    "array-bracket-spacing": [true, "always"],
+    "object-curly-spacing": [true, "always"],
+
+    "nx-enforce-module-boundaries": [
+      true,
+      {
+        "lazyLoad": [],
+        "allow": []
+      }
+    ]
+  },
+  "rulesDirectory": [
+    "node_modules/codelyzer",
+    "node_modules/@nrwl/schematics/src/tslint"
+  ]
+}
