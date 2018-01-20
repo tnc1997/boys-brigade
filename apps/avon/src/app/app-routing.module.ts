@@ -11,6 +11,18 @@ const ROUTES: Routes = [
     loadChildren: './home/home.module#HomeModule',
     path: 'home',
   },
+  {
+    loadChildren: './info/info.module#InfoModule',
+    path: 'info',
+  },
+  {
+    loadChildren: './companies/companies.module#CompaniesModule',
+    path: 'companies',
+  },
+  {
+    loadChildren: './events/events.module#EventsModule',
+    path: 'events',
+  },
 ];
 
 @NgModule({
