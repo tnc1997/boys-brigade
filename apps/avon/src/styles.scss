@@ -1,17 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i');
-
-* {
-  font-family: 'PT Sans', sans-serif !important;
-}
+@import "~@angular/material/_theming";
+@import "./theme";
 
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
 a {
-  color: #fff;
   text-decoration: none;
+}
+
+a, .active * {
+  color: mat-color($app-primary, A100);
 }
 
 body {
@@ -31,6 +31,14 @@ body, html {
 
 html {
   box-sizing: border-box;
+}
+
+.mat-card-header-text {
+  margin: 0 !important;
+}
+
+mat-grid-list {
+  margin: 16px;
 }
 
 mat-sidenav-container {
