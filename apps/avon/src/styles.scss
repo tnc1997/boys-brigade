@@ -2,5 +2,41 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i');
 
 * {
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', sans-serif !important;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+mat-sidenav-container {
+  flex: 1;
+
+  mat-sidenav {
+    width: 240px;
+  }
 }

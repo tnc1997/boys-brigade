@@ -70,6 +70,12 @@
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
       }
+    },
+    {
+      "name": "material",
+      "root": "libs/material/src",
+      "test": "../../../test.js",
+      "appRoot": ""
     }
   ]
 }
