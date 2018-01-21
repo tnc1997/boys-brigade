@@ -32,7 +32,6 @@
   "defaults": {
     "schematics": {
       "collection": "@nrwl/schematics",
-      "postGenerate": "npm run format",
       "newProject": [
         "app",
         "lib"
@@ -50,8 +49,7 @@
       "root": "apps/avon/src",
       "outDir": "dist/apps/avon",
       "assets": [
-        "assets",
-        "favicon.ico"
+        "assets"
       ],
       "index": "index.html",
       "main": "main.ts",

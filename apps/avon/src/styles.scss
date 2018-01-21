@@ -1,8 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/_theming';
-@import './theme';
-
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -10,11 +9,8 @@ a {
   text-decoration: none;
 }
 
-a, .active * {
-  color: mat-color($app-primary, A100);
-}
-
-app-footer, app-header {
+app-footer,
+app-header {
   z-index: 10;
 }
 
@@ -26,7 +22,8 @@ body {
   margin: 0;
 }
 
-body, html {
+body,
+html {
   height: 100%;
   width: 100%;
 }
@@ -41,10 +38,36 @@ html {
   box-sizing: border-box;
 }
 
+/* Angular Material Theme Overrides */
+@import '~@angular/material/_theming';
+@import './theme';
+
+$primary-accent: mat-color($app-primary, A200);
+
+a,
+.active *,
+.mat-focused .mat-form-field-label,
+.mat-form-field.mat-focused.mat-primary .mat-select-arrow,
+.mat-header-cell.mat-sort-header-sorted,
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+  color: $primary-accent !important;
+}
+
 .mat-card-header-text {
   margin: 0 !important;
 }
 
-mat-grid-list {
-  margin: 16px;
+.mat-form-field-ripple {
+  background-color: $primary-accent !important;
+}
+
+.mat-grid-list {
+  margin: 16px !important;
+}
+
+.mat-input-element {
+  caret-color: $primary-accent !important;
+}
+.mat-sort-header-container {
+  align-items: center;
 }

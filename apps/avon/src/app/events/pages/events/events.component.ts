@@ -9,8 +9,8 @@ import { ICard } from '@boys-brigade/shared';
 export class EventsComponent {
   public cards: ICard[] = [
     {
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ' +
-      'semper lobortis nibh at suscipit. Duis.',
+      content: 'There are currently no major upcoming events in the Avon ' +
+      'Battalion, please check with your local company for other events.',
       title: 'Events',
     },
   ];
