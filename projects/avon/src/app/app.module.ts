@@ -4,6 +4,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {RouterModule, Routes} from '@angular/router';
 
 import {AppComponent} from './app.component';
+import {AboutModule} from './about/about.module';
 import {HomeModule} from './home/home.module';
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
     BrowserAnimationsModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
+    AboutModule,
     HomeModule
   ],
   providers: [],
