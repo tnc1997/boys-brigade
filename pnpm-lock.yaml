@@ -1,9 +1,11 @@
 dependencies:
   '@angular/animations': 8.1.0
+  '@angular/cdk': 8.0.2
   '@angular/common': 8.1.0
   '@angular/compiler': 8.1.0
   '@angular/core': 8.1.0
   '@angular/forms': 8.1.0
+  '@angular/material': 8.0.2
   '@angular/platform-browser': 8.1.0
   '@angular/platform-browser-dynamic': 8.1.0
   '@angular/router': 8.1.0
@@ -162,6 +164,17 @@ packages:
       '@angular/core': 8.1.0
     resolution:
       integrity: sha512-v1paXrWQGsD+E4QBpwNUZ8dPj8hEn0b2kDVzYX6l/e9flUX6W2BWYx+BRuC4QBnNtTV9jiGsHT8FmQq/WztgWw==
+  /@angular/cdk/8.0.2:
+    dependencies:
+      tslib: 1.10.0
+    dev: false
+    optionalDependencies:
+      parse5: 5.1.0
+    peerDependencies:
+      '@angular/common': ^8.0.0 || ^9.0.0-0
+      '@angular/core': ^8.0.0 || ^9.0.0-0
+    resolution:
+      integrity: sha512-Tv9M0vuTp7Ogk7mRiEpzBG9x5289FXe+WH0VKqN4zTzF/taTgGEuJBLDcFrwQMW0mFpGP7acVOiopgH+nClytg==
   /@angular/cli/8.1.0:
     dependencies:
       '@angular-devkit/architect': 0.801.0
@@ -251,6 +264,18 @@ packages:
     dev: true
     resolution:
       integrity: sha512-CCuxGiaGWrjDo9YEFaW1aj7p5PEPDpBLutnJ3iaOrtYvYpX8303b5XnQjqAJvFK47CyBFV+hj+Agpl+h+OG36g==
+  /@angular/material/8.0.2:
+    dependencies:
+      tslib: 1.10.0
+    dev: false
+    peerDependencies:
+      '@angular/animations': ^8.0.0 || ^9.0.0-0
+      '@angular/cdk': 8.0.2
+      '@angular/common': ^8.0.0 || ^9.0.0-0
+      '@angular/core': ^8.0.0 || ^9.0.0-0
+      '@angular/forms': ^8.0.0 || ^9.0.0-0
+    resolution:
+      integrity: sha512-Q6YxX7zLsfI1kv0dSJSENSyCuwq7GdHjHzOGeogGfjQRvX3N/ty/z8YfwhQFzZ3XtIysbhuGcpAUWazgWeIKgw==
   /@angular/platform-browser-dynamic/8.1.0:
     dependencies:
       tslib: 1.10.0
@@ -4857,6 +4882,11 @@ packages:
     dev: true
     resolution:
       integrity: sha512-VrZ7eOd3T1Fk4XWNXMgiGBK/z0MG48BWG2uQNU4I72fkQuKUTZpl+u9k+CxEG0twMVzSmXEEz12z5Fnw1jIQFA==
+  /parse5/5.1.0:
+    dev: false
+    optional: true
+    resolution:
+      integrity: sha512-fxNG2sQjHvlVAYmzBZS9YlDp6PTSSDwa98vkD4QgVDDCAo84z5X1t5XyJQ62ImdLXx5NdIIfihey6xpum9/gRQ==
   /parseqs/0.0.5:
     dependencies:
       better-assert: 1.0.2
@@ -7110,7 +7140,8 @@ packages:
       integrity: sha512-GkPiJL8jifSrKReKaTZ5jkhrMEgXbXYC+IPo1iquBjayRa0q86w3Dipjn8b415jpitMExe9lV8iTsv8tk3DGag==
 specifiers:
   '@angular-devkit/build-angular': ~0.801.0
-  '@angular/animations': ~8.1.0
+  '@angular/animations': ^8.1.0
+  '@angular/cdk': ^8.0.2
   '@angular/cli': ~8.1.0
   '@angular/common': ~8.1.0
   '@angular/compiler': ~8.1.0
@@ -7118,6 +7149,7 @@ specifiers:
   '@angular/core': ~8.1.0
   '@angular/forms': ~8.1.0
   '@angular/language-service': ~8.1.0
+  '@angular/material': ^8.0.2
   '@angular/platform-browser': ~8.1.0
   '@angular/platform-browser-dynamic': ~8.1.0
   '@angular/router': ~8.1.0
