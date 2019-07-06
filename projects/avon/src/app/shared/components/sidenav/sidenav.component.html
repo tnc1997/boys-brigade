@@ -1,14 +1,25 @@
-<mat-sidenav-container>
-  <mat-sidenav mode="side" opened>
-    <mat-nav-list>
-      <mat-list-item *ngFor="let item of sidenavItems" [routerLink]="item.routerLink" routerLinkActive="active">
-        <mat-icon matListIcon [svgIcon]="item.icon"></mat-icon>
-        <p matLine>{{item.title}}</p>
-      </mat-list-item>
-    </mat-nav-list>
-  </mat-sidenav>
+<div class="container" [class.is-mobile]="mobileQuery.matches">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button mat-icon-button (click)="sidenav.toggle()"><mat-icon svgIcon="menu"></mat-icon></button>
+      <h1 class="app-name">Avon Battalion</h1>
+      <span class="spacer"></span>
+      <a href="mailto:avon.battalion@boys-brigade.org.uk"><mat-icon svgIcon="email"></mat-icon></a>
+    </mat-toolbar-row>
+  </mat-toolbar>
 
-  <mat-sidenav-content>
-    <ng-content select="[appSidenavContent]"></ng-content>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+  <mat-sidenav-container [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #sidenav [fixedInViewport]="mobileQuery.matches" fixedTopGap="56" [mode]="mobileQuery.matches ? 'over' : 'side'" [opened]="!mobileQuery.matches">
+      <mat-nav-list>
+        <mat-list-item *ngFor="let item of items" [routerLink]="item.routerLink" routerLinkActive="active">
+          <mat-icon matListIcon [svgIcon]="item.icon"></mat-icon>
+          <p matLine>{{item.title}}</p>
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <ng-content select="[appSidenavContent]"></ng-content>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

@@ -2,6 +2,8 @@
 @import '~@angular/material/_theming';
 @import './theme';
 
+$primary-accent: mat-color($app-primary, A200);
+
 *,
 *:before,
 *:after {
@@ -11,9 +13,18 @@
 a {
   text-decoration: none;
 
-  &.mat-menu-item > mat-icon {
+  &.mat-menu-item > .mat-icon {
     margin-bottom: 14px;
   }
+}
+
+a,
+.active *,
+.mat-focused .mat-form-field-label,
+.mat-form-field.mat-focused.mat-primary .mat-select-arrow,
+.mat-header-cell.mat-sort-header-sorted,
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+  color: $primary-accent !important;
 }
 
 button.mat-menu-item {
@@ -28,12 +39,6 @@ body,
 html {
   height: 100%;
   width: 100%;
-}
-
-.content {
-  display: flex;
-  flex-flow: column nowrap;
-  height: 100%;
 }
 
 html {

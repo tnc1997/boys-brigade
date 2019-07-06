@@ -1,4 +1,5 @@
-import {Component, Input} from '@angular/core';
+import {MediaMatcher} from '@angular/cdk/layout';
+import {ChangeDetectorRef, Component, Input, OnDestroy, OnInit} from '@angular/core';
 
 import {SidenavItem} from '../../../core/models/SidenavItem';
 
@@ -7,11 +8,27 @@ import {SidenavItem} from '../../../core/models/SidenavItem';
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss']
 })
-export class SidenavComponent {
-  @Input() public sidenavItems: SidenavItem[] = [
+export class SidenavComponent implements OnDestroy, OnInit {
+  private readonly mobileQuery: MediaQueryList;
+  private readonly mobileQueryListener: EventListener;
+
+  @Input() public items: SidenavItem[] = [
     new SidenavItem('Home', 'home', '/home'),
     new SidenavItem('About', 'information', '/about'),
     new SidenavItem('Companies', 'church', '/companies'),
     new SidenavItem('Events', 'calendar', '/events')
   ];
+
+  constructor(changeDetectorRef: ChangeDetectorRef, mediaMatcher: MediaMatcher) {
+    this.mobileQuery = mediaMatcher.matchMedia('(max-width: 600px)');
+    this.mobileQueryListener = () => changeDetectorRef.detectChanges();
+  }
+
+  ngOnDestroy(): void {
+    this.mobileQuery.removeEventListener('resize', this.mobileQueryListener);
+  }
+
+  ngOnInit(): void {
+    this.mobileQuery.addEventListener('resize', this.mobileQueryListener);
+  }
 }
