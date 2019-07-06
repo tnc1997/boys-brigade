@@ -6846,6 +6846,7 @@ packages:
       opn: 5.5.0
       p-retry: 3.0.1
       portfinder: 1.0.20
+      querystring: 0.2.0
       schema-utils: 1.0.0
       selfsigned: 1.10.4
       semver: 6.2.0
@@ -6914,6 +6915,7 @@ packages:
       chrome-trace-event: 1.0.2
       enhanced-resolve: 4.1.0
       eslint-scope: 4.0.3
+      events: 3.0.0
       json-parse-better-errors: 1.0.2
       loader-runner: 2.4.0
       loader-utils: 1.2.3
