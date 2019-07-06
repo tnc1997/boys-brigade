@@ -5,6 +5,7 @@ import {RouterModule, Routes} from '@angular/router';
 
 import {AppComponent} from './app.component';
 import {AboutModule} from './about/about.module';
+import {CompaniesModule} from './companies/companies.module';
 import {HomeModule} from './home/home.module';
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(routes),
     AboutModule,
+    CompaniesModule,
     HomeModule
   ],
   providers: [],
