@@ -30,6 +30,12 @@ html {
   width: 100%;
 }
 
+.content {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+}
+
 html {
   box-sizing: border-box;
 }
