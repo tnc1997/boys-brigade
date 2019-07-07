@@ -9,8 +9,8 @@ import {SidenavItem} from '../../../core/models/SidenavItem';
   styleUrls: ['./sidenav.component.scss']
 })
 export class SidenavComponent implements OnDestroy, OnInit {
-  private readonly mobileQuery: MediaQueryList;
-  private readonly mobileQueryListener: EventListener;
+  public readonly mobileQuery: MediaQueryList;
+  public readonly mobileQueryListener: EventListener;
 
   @Input() public items: SidenavItem[] = [
     new SidenavItem('Home', 'home', '/home'),

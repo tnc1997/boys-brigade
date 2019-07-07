@@ -27,6 +27,12 @@ module.exports = {
  * The return value is the updated object.
  */
 function readPackage(packageJson, context) {
+  // The @angular/cli package has a missing dependency on the safe-buffer package.
+  if (packageJson.name === "@angular/cli") {
+    packageJson.dependencies["safe-buffer"] = "^5.0.0";
+    context.log("Fixed up dependencies for @angular/cli");
+  }
+
   // The webpack package has a missing dependency on the events package.
   if (packageJson.name === "webpack") {
     packageJson.dependencies["events"] = "^3.0.0";

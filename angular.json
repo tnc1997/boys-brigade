@@ -25,6 +25,7 @@
             "aot": false,
             "assets": [
               "projects/avon/src/favicon.ico",
+              "projects/avon/src/manifest.webmanifest",
               "projects/avon/src/assets"
             ],
             "styles": [
@@ -55,7 +56,9 @@
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
                 }
-              ]
+              ],
+              "serviceWorker": true,
+              "ngswConfigPath": "projects/avon/ngsw-config.json"
             }
           }
         },
@@ -85,6 +88,7 @@
             "karmaConfig": "projects/avon/karma.conf.js",
             "assets": [
               "projects/avon/src/favicon.ico",
+              "projects/avon/src/manifest.webmanifest",
               "projects/avon/src/assets"
             ],
             "styles": [
