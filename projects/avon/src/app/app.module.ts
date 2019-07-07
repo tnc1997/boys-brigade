@@ -1,10 +1,7 @@
-import {HttpClientModule} from '@angular/common/http';
 import {NgModule} from '@angular/core';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {RouterModule, Routes} from '@angular/router';
-import {ServiceWorkerModule} from '@angular/service-worker';
 
-import {environment} from '../environments/environment';
+import {CoreModule} from './core/core.module';
 import {AppComponent} from './app.component';
 
 const routes: Routes = [
@@ -20,13 +17,13 @@ const routes: Routes = [
     AppComponent
   ],
   imports: [
-    BrowserAnimationsModule,
-    HttpClientModule,
-    RouterModule.forRoot(routes),
-    ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production})
+    CoreModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule {
 }
