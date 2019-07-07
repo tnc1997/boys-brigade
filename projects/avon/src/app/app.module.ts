@@ -6,6 +6,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {AppComponent} from './app.component';
 import {AboutModule} from './about/about.module';
 import {CompaniesModule} from './companies/companies.module';
+import {EventsModule} from './events/events.module';
 import {HomeModule} from './home/home.module';
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     AboutModule,
     CompaniesModule,
+    EventsModule,
     HomeModule
   ],
   providers: [],
