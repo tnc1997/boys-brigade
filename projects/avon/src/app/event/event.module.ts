@@ -2,20 +2,20 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 
 import {SharedModule} from '../shared/shared.module';
-import {CompaniesComponent} from './components/companies/companies.component';
+import {EventsComponent} from './components/events/events.component';
 
 const routes: Routes = [
-  {path: 'companies', component: CompaniesComponent}
+  {path: '', component: EventsComponent}
 ];
 
 @NgModule({
   declarations: [
-    CompaniesComponent
+    EventsComponent
   ],
   imports: [
     RouterModule.forChild(routes),
     SharedModule
   ]
 })
-export class CompaniesModule {
+export class EventModule {
 }

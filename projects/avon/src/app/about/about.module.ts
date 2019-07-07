@@ -5,7 +5,7 @@ import {SharedModule} from '../shared/shared.module';
 import {AboutComponent} from './components/about/about.component';
 
 const routes: Routes = [
-  {path: 'about', component: AboutComponent}
+  {path: '', component: AboutComponent}
 ];
 
 @NgModule({

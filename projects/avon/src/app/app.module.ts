@@ -4,12 +4,12 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {RouterModule, Routes} from '@angular/router';
 
 import {AppComponent} from './app.component';
-import {AboutModule} from './about/about.module';
-import {CompaniesModule} from './companies/companies.module';
-import {EventsModule} from './events/events.module';
-import {HomeModule} from './home/home.module';
 
 const routes: Routes = [
+  {path: 'about', loadChildren: () => import('./about/about.module').then(module => module.AboutModule)},
+  {path: 'companies', loadChildren: () => import('./company/company.module').then(module => module.CompanyModule)},
+  {path: 'events', loadChildren: () => import('./event/event.module').then(module => module.EventModule)},
+  {path: 'home', loadChildren: () => import('./home/home.module').then(module => module.HomeModule)},
   {path: '', redirectTo: '/home', pathMatch: 'full'}
 ];
 
@@ -20,11 +20,7 @@ const routes: Routes = [
   imports: [
     BrowserAnimationsModule,
     HttpClientModule,
-    RouterModule.forRoot(routes),
-    AboutModule,
-    CompaniesModule,
-    EventsModule,
-    HomeModule
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
