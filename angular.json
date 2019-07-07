@@ -24,6 +24,7 @@
             "tsConfig": "projects/avon/tsconfig.app.json",
             "aot": false,
             "assets": [
+              "projects/avon/src/browserconfig.xml",
               "projects/avon/src/favicon.ico",
               "projects/avon/src/manifest.webmanifest",
               "projects/avon/src/assets"
@@ -87,6 +88,7 @@
             "tsConfig": "projects/avon/tsconfig.spec.json",
             "karmaConfig": "projects/avon/karma.conf.js",
             "assets": [
+              "projects/avon/src/browserconfig.xml",
               "projects/avon/src/favicon.ico",
               "projects/avon/src/manifest.webmanifest",
               "projects/avon/src/assets"
