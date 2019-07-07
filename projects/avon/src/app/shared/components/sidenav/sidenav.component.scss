@@ -30,6 +30,16 @@ h1.app-name {
 
   .mat-sidenav {
     width: 280px;
+
+    .mat-sidenav-inner-container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      .footer {
+        text-align: center;
+      }
+    }
   }
 }
 
